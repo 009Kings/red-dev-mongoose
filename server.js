@@ -25,6 +25,28 @@ db.on('error',  err => {
   console.error(`🔥 Database Error:\n${err}`);
 });
 
+// // Testing Mongoose — TODO: Remove and fill with actual CRUD
+// const User = require('./models/user');
+
+// // Method 1
+// let topDog = new User({
+//   name: 'Anna Zocher',
+//   email: 'anna.zocher@ga.co'
+// });
+// topDog.save(err => {
+//   if (err) return console.error(`💩 Yikes bud:\n${err}`);
+//   console.log(`${topDog.name} was successfully created!`);
+// });
+
+// // Method 2
+// User.create({
+//   name: 'Gavin Callandar',
+//   email: 'tosspot@ga.co'
+// }, (err, user) => {
+//   if (err) return console.error(`💩 Trouble in Create:\n${err}`);
+//   console.log(`${user.name} hath been created`);
+// })
+
 // Route
 app.get('/', (req, res) => {
   res.json({message: '🍑'});
